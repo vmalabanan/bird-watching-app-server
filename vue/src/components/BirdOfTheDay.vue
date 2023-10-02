@@ -1,6 +1,6 @@
 <template>
   <div id="dailyBird">
-    <iframe
+    <iframe v-if="error == ''"
       width="800"
       height="578"
       v-bind:src="imgUrl + '/embed/800'"
@@ -8,6 +8,7 @@
       allowfullscreen
       style="width: 800px"
     ></iframe>
+    <p v-else>{{ this.error }}</p>
   </div>
 </template>
 
